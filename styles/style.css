@@ -37,6 +37,7 @@
   justify-content: center; 
   gap: 20px;
   border: var(--header-border);
+  line-height: 1;
 }
 
 .container-size {
@@ -63,7 +64,7 @@
 .card-list {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 49px;
 }
 
 .card {
@@ -187,7 +188,7 @@
 .card__icon-button {
   background-color: var(--back-color);
   cursor: pointer;
-  border: transparent;
+  border: solid transparent 2px;
   transition: border 0.3s ease;
   display: flex;
   align-items: center;
@@ -312,7 +313,7 @@
     gap: 8px;
     padding: 17px 20px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 49px;
     font-family: var(--accent-font), fantasy;
     font-size: 14px;
     line-height: 90%;
@@ -321,14 +322,12 @@
     border: var(--card-border);
 }
 
-.floppy {
-  width: 21px;
-  height: 21px;
-}
-
 .dialog {
   display: flex;
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
   gap: 30px;
   flex-direction: column;
   justify-content: center;
@@ -338,7 +337,7 @@
 }
 
 .dialog::backdrop {
-  backdrop-filter: brightness(35%);
+  backdrop-filter: brightness(25%);
 } 
 
 .dialog:not([open]) {
@@ -352,6 +351,7 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
+  align-items: center;
 }
 
 .text-dialog {
@@ -369,10 +369,11 @@
   padding-bottom: 12.5px;
   block-size: 38px;
   inline-size: 100%;
+  line-height: 0.9;
 }
 
 .floppy-dialog {
-  width: 39px;
+  width: 82px;
   height: 39px;
   fill: currentColor;
 } 
@@ -380,7 +381,7 @@
 @media (width < 376px) {
 
   .header {
-    margin-bottom: 100px;
+    margin-bottom: 98px;
   }
 
   .button-save {
@@ -391,6 +392,9 @@
      width: 28px;
      height: 28px;
  }
+
+ .dialog {
+    padding-left: 40px;
+    padding-right: 40px;
 }
-
-
+}
